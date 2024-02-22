@@ -33,10 +33,10 @@ Create a model that takes in OHLC price data, creates an image, creates a predic
 ## Live Data Testing (Currently Working On: Cole):
 1. Identify API to collect required data for simple, singular model (no ensembling, only best image classification model)
 2. Data Requirements for API:
-  a. Time
-  b. Date
-  c. 2 minute OHLC prices
-  d. Last 15 candlesticks 
+    - Time
+    - Date
+    - 2 minute OHLC prices
+    - Last 15 candlesticks 
 4. Clean and engineer data as needed
 5. Pass data through image creator
 6. Pass image through model
