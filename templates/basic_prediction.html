@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Stock Prediction App</h1>
+    <form method="post" action="/basic-prediction">
+        <!-- <label for="stock-datetime">Date and Time</label>
+        <input id="stock-datetime" type="datetime-local"> -->
+        <!-- <label for="two-min-ohlc-prices">2 Min OHLC Prices</label>
+        <textarea id="two-min-ohlc-prices" name="data" placeholder="Enter data"></textarea> -->
+        <label for="last-fifteen-candles">Last Fifteen Candles</label>
+        <textarea id="last-fifteen-candles" name="last-fifteen-candles" placeholder="Enter JSON data" rows="25"></textarea>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
