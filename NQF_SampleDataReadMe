@@ -1,0 +1,13 @@
+Realistically the only data that we need to collect for this first iteration of the project is the Date, Time, Open, High, Low, Close data. 
+Everything else can be ignored when collecting data including volume.
+Things may need to change as I work work on more ensembling techniques.
+The buy price/trade initiation price (can take short positions) will be the close price of the last candle in the image.
+
+Example:
+Image 1 will be created using row 2 (date: 11/20/2023, Time: 13:00:00, etc.) through row 16 (date: 11/20/2023, Time: 13:28:00, etc.)
+*Note* Row 16 will be considered the "Trade Initiation Candle", this is the final candle in the sequence where we predict buy, sell, do nothing
+
+Trade Initiation Price = 15893 (Close_2m of row 16)
+Trade Close Price = 15896.25 (Close_2m of row 19, which is 6 minutes after Trade Initiation Candle)
+*Note* For simplicity we are assuming we hold for 6 minutes and close the trade regardless, no stop loss, holding for longer, etc. 
+Trade Returns = Trade Close Price - Trade Initiation Price
