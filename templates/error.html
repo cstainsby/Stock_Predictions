@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block body_content %}
+<h3>You Have Encountered an Error</h3>
+<p>{{error_description}}</p>
+<p>{{returned_error_message}}</p>
+<p>{{user_input_value}}</p>
+<a href="/">Back</a>
+{% endblock %}

@@ -75,14 +75,9 @@ class DenseNetModel():
 
         model_outputs = self.model(figure_tensor)
         output_probabilities = F.softmax(model_outputs, dim=1)
-        print("Output Probabilities: " + str(output_probabilities))
         _, raw_prediction = output_probabilities.max(1)
 
         # map prediction tensor to Enum
-        #   0 -> 
-        #
-        #
-        print("Prediction Made: " + str(raw_prediction))
         predicted_class_num = raw_prediction.tolist()[0]
         if raw_prediction == TrendClassification.BEAR.value:
             prediction = TrendClassification.BEAR
